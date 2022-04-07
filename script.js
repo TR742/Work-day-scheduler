@@ -20,6 +20,5 @@ let saveBtn = $(".saveBtn");
 saveBtn.on("click", function() {
     let hour = $(this).siblings(".hour").text();
     let userInput = $(this).siblings(".description").val();
-
     localStorage.setItem(hour, userInput);
 });
