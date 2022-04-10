@@ -15,13 +15,13 @@ let four = $('#four');
 let five = $('#five');
 
 // Save button function to save userInput to local storage, need to add getItem function working
-let saveBtn = $(".saveBtn") 
+let saveBtn = $(".saveBtn")
 
 saveBtn.on('click', function () {
-    let inputValue=$(this).siblings('.description').val()
-    let id=$(this).parent().attr('id')
-    localStorage.setItem(id,inputValue)
-    });
+    let inputValue = $(this).siblings('.description').val()
+    let id = $(this).parent().attr('id')
+    localStorage.setItem(id, inputValue)
+});
 
 $('#nine .description').val(localStorage.getItem('nine'));
 $('#ten .description').val(localStorage.getItem('ten'));
@@ -32,3 +32,25 @@ $('#two .description').val(localStorage.getItem('two'));
 $('#three .description').val(localStorage.getItem('three'));
 $('#four .description').val(localStorage.getItem('four'));
 $('#five .description').val(localStorage.getItem('five'));
+
+//Determines color of each time block 
+function updateTime() {
+    let currentTime = moment().hours();
+    console.log(currentTime);
+    $('.time-block').each(function () {
+        let timeBlock = $(this).attr('id')
+        console.log(timeBlock)
+        if (currentTime < timeBlock) {
+            $(this).addClass('future');
+        }
+        else if (currentTime > timeBlock) {
+            $(this).addClass('past');
+        }
+        else {
+            $(this).addClass('present');
+        }
+    }
+    )
+};
+
+updateTime();
