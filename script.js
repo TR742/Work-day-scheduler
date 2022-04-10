@@ -23,15 +23,15 @@ saveBtn.on('click', function () {
     localStorage.setItem(id, inputValue)
 });
 
-$('#nine .description').val(localStorage.getItem('nine'));
-$('#ten .description').val(localStorage.getItem('ten'));
-$('#eleven .description').val(localStorage.getItem('eleven'));
-$('#twelve .description').val(localStorage.getItem('twelve'));
-$('#one .description').val(localStorage.getItem('one'));
-$('#two .description').val(localStorage.getItem('two'));
-$('#three .description').val(localStorage.getItem('three'));
-$('#four .description').val(localStorage.getItem('four'));
-$('#five .description').val(localStorage.getItem('five'));
+$('#9 .description').val(localStorage.getItem('9'));
+$('#10 .description').val(localStorage.getItem('10'));
+$('#11 .description').val(localStorage.getItem('11'));
+$('#12 .description').val(localStorage.getItem('12'));
+$('#13 .description').val(localStorage.getItem('13'));
+$('#14 .description').val(localStorage.getItem('14'));
+$('#15 .description').val(localStorage.getItem('15'));
+$('#16 .description').val(localStorage.getItem('16'));
+$('#17 .description').val(localStorage.getItem('17'));
 
 //Determines color of each time block 
 function updateTime() {
